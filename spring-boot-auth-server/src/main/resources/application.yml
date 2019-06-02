@@ -1,0 +1,18 @@
+server:
+  port: 9900
+spring:
+  security:
+    user:
+      name: admin
+      password: admin123
+      roles: ADMIN,USER
+security:
+  oauth2:
+    client:
+      client-id: website
+      client-secret: pincode
+      access-token-validity-seconds: 3600
+      authorized-grant-types: refresh_token,authorization_code,password,client_credentials
+      scope: READ,WRITE
+    authorization:
+      check-token-access: permitAll
